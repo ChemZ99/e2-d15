@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-netflix">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">GoG Repository</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+            <a class="nav-link" href="#">Cart</a>
+            <a class="nav-link" href="backoffice.html">Add game</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h1 class="fs-big text-center text-white mt-3">Add a game to the list</h1>
+    <form onsubmit="postnewgame(event)">
+      <div class="d-flex flex-column ps-giga pe-giga">
+        <div class="mb-3 d-flex flex-column align-items-center">
+          <label class="form-label text-white">Game Name</label>
+          <input id="nameinput" class="form-control text-center" placeholder="Insert the game name here" required />
+        </div>
+        <div class="mb-3 d-flex flex-column align-items-center">
+          <label class="form-label text-white">Game Description</label>
+          <input
+            id="descinput"
+            class="form-control text-center"
+            placeholder="Insert the game description here"
+            required
+          />
+        </div>
+        <div class="mb-3 d-flex flex-column align-items-center">
+          <label class="form-label text-white">Game Producer</label>
+          <input
+            id="brandinput"
+            class="form-control text-center"
+            placeholder="Insert the game producer here"
+            required
+          />
+        </div>
+        <div class="mb-3 d-flex flex-column align-items-center">
+          <label class="form-label text-white">Game Image</label>
+          <input
+            id="imginput"
+            class="form-control text-center"
+            placeholder="Insert the game image (URL only) here"
+            required
+          />
+        </div>
+        <div class="mb-3 d-flex flex-column align-items-center">
+          <label class="form-label text-white">Game Price</label>
+          <input
+            id="priceinput"
+            class="form-control text-center"
+            placeholder="Insert the game price (without $) here"
+            required
+          />
+        </div>
+        <div class="d-flex justify-content-evenly">
+          <button type="submit" class="btn btn-primary ms-3 me-3 mt-5">Add the game to the list</button>
+          <button type="button" onclick="resetform()" class="btn btn-primary ms-3 me-3 mt-5">Reset the form</button>
+        </div>
+      </div>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script2.js"></script>
+  </body>
+</html>
